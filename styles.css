@@ -23,7 +23,7 @@ a {
     font-size: 2rem;
 }
 
-h1,h2,h3,#dash, #icon{
+h1,h2,h3,#dash, #icon, h4{
     font-family: 'Rubik', sans-serif;
     font-weight: 400;
 }
@@ -40,6 +40,13 @@ h3, #icon{
     font-size: 1rem;
 }
 
+h4{
+    font-size: 1rem;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+
 button{
     width: 5rem;
     height: 3rem;
@@ -49,6 +56,13 @@ button{
     font-family: 'Rubik', sans-serif;
     font-weight: 700;
 
+}
+
+hr{
+    border: .5px solid lightblue;
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 
@@ -168,16 +182,36 @@ button{
 }
 
 
-
-
 .announcements{
     grid-area: announcements;
+    display: flex;
+    flex-direction: column;
     border:1px solid black;
+    /* justify-content: space-between;  */
+
+}
+
+.facts-header{
+    grid-area: header;
+    margin-top: 0;
+}
+
+.facts-cont{
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+
+}
+
+.facts{
+    text-align: center;
 }
 
 .trending{
     grid-area: trending;
-    border:1px solid black;
+    border: 1px solid black;
 }
 
 .header, .dashboard-grid, .projects, .announcements, .trending {
