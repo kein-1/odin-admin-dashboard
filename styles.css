@@ -1,7 +1,7 @@
 body{
     display: grid;
     height: 100vh;
-    grid-template: 1.25fr 1fr 1fr 1fr 1fr/ 1.25fr 1fr 1fr 1fr 1fr;
+    grid: 1fr 1fr 1fr 1fr 1fr/ 1fr 1fr 1fr 1fr 1fr;
     grid-template-areas:
     "dashboard header header header header"
     "dashboard projects projects projects announcements"
@@ -15,8 +15,15 @@ img {
     width: 2rem;
 }
 
+a {
+    text-decoration: none;
+}
 
-h1,h2{
+#dash{
+    font-size: 2rem;
+}
+
+h1,h2,h3,#dash, #icon{
     font-family: 'Rubik', sans-serif;
     font-weight: 400;
 }
@@ -26,31 +33,142 @@ h1{
 }
 
 h2{
+    font-size: 1.5rem;
+}
+
+h3, #icon{
     font-size: 1rem;
 }
 
+button{
+    width: 5rem;
+    height: 3rem;
+    border-radius: 15px;
+    color: white;
+    background-color: lightblue;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 700;
 
+}
 
 
 .header{
     grid-area: header;
-    border:1px solid black;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr auto;
+    grid-template-areas: 
+        "search search name"
+        "hello hello buttons";
+    /* gap: 50px; */
+}
+
+.header-cont-1{
+    grid-area: search;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.header-cont-1 > input{
+    width: 80%;
+    border-radius: 15px;
+    padding: 10px;
+}
+
+
+.header-cont-2 {
+    grid-area: name;
+    display: flex;
+    gap: 25px;
+    align-items: center;
+    justify-content: flex-end;
+}
+#profile{
+    width:3rem;
+    height: 3rem;
+}
+
+
+.header-cont-3{
+    grid-area:  hello;
+    display: flex;
+    align-items: center;
+    gap:25px;
+    height:auto;
+}
+
+#profile2{
+    width:5rem;
+    height: 5rem;
+}
+
+.header-cont-4{
+    grid-area: buttons;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 30px;
 }
 
 .dashboard-grid{
     grid-area: dashboard;
     display: flex;
     flex-direction: column;
-    border:1px solid black;
-    padding: 25px;
     gap: 50px;
+    color: blue;
     /* justify-content: space-around; */
 }
 
 .projects{
     grid-area: projects;
     border:1px solid black;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 50px 1fr 1fr 1fr;
+    grid-template-areas: 
+        "header header"
+        "project1 project2"
+        "project3 project4"
+        "project5 project6";
+    gap:25px;
+
 }
+
+.project-header{
+    grid-area: header;
+}
+
+.project-cont-1{
+    grid-area: project1;
+}
+
+.project-cont-2{
+    grid-area: project2;
+}
+
+.project-cont-3{
+    grid-area: project3;
+}
+
+.project-cont-4{
+    grid-area: project4;
+}
+
+.project-cont-5{
+    grid-area: project5;
+}
+
+.project-cont-6{
+    grid-area: project6;
+}
+
+.project-box{
+    border: 5px solid black;
+}
+
+
+
 
 .announcements{
     grid-area: announcements;
@@ -62,8 +180,16 @@ h2{
     border:1px solid black;
 }
 
+.header, .dashboard-grid, .projects, .announcements, .trending {
+    padding: 25px;
+    border:1px solid black;
+
+}
+
 .icon-flex-box, .dashboard-header{
     display: flex;
     align-items: center;
     gap: 20px;
 }
+
+
