@@ -1,7 +1,13 @@
+html{
+    height:100vh;
+}
+
 body{
     display: grid;
-    height: 100vh;
-    grid: 1fr 1fr 1fr 1fr 1fr/ 1fr 1fr 1fr 1fr 1fr;
+    /* height: 100%; */
+    height: auto;
+    grid-template-rows: 250px 1fr 1fr 1fr 1fr;
+    grid-template-columns: 300px 1fr 1fr 1fr 250px;
     grid-template-areas:
     "dashboard header header header header"
     "dashboard projects projects projects announcements"
@@ -41,7 +47,7 @@ h3, #icon{
 }
 
 h4{
-    font-size: 1rem;
+    font-size: .9rem;
     margin-top: 0;
     margin-bottom: 0;
 }
@@ -146,6 +152,7 @@ hr{
         "project3 project4"
         "project5 project6";
     gap:25px;
+    justify-items: center;
 
 }
 
@@ -155,6 +162,7 @@ hr{
 
 .project-cont-1{
     grid-area: project1;
+
 }
 
 .project-cont-2{
@@ -177,8 +185,36 @@ hr{
     grid-area: project6;
 }
 
-.project-box{
-    border: 5px solid black;
+
+.project-cont-1,.project-cont-2,.project-cont-3,.project-cont-4,
+.project-cont-5,.project-cont-6{
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    max-height: 400px;
+}
+
+.project-pic{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+
+
+
+
+.img-cont{
+    width: 100%;
+    height:90%;
+}
+
+#project-pic{
+    height: 100%;
+    width: 100%;
+    /* max-width: 600px;
+    max-height: 600px; */
+    object-fit:cover;
 }
 
 
@@ -187,6 +223,7 @@ hr{
     display: flex;
     flex-direction: column;
     border:1px solid black;
+    
     /* justify-content: space-between;  */
 
 }
@@ -198,11 +235,10 @@ hr{
 
 .facts-cont{
     display: flex;
-    height: 100%;
     flex-direction: column;
-    justify-content: space-evenly;
-
-
+    /* justify-content: stretch; */
+    flex-wrap: wrap;
+    gap: 25px;
 }
 
 .facts{
@@ -212,6 +248,9 @@ hr{
 .trending{
     grid-area: trending;
     border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+
 }
 
 .header, .dashboard-grid, .projects, .announcements, .trending {
