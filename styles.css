@@ -66,7 +66,7 @@ button{
 
 hr{
     border: .5px solid lightblue;
-    width: 100%;
+    width: auto;
     margin-top: 0;
     margin-bottom: 0;
 }
@@ -81,6 +81,7 @@ hr{
         "search search name"
         "hello hello buttons";
     /* gap: 50px; */
+    background-color: whitesmoke;
 }
 
 .header-cont-1{
@@ -136,13 +137,14 @@ hr{
     display: flex;
     flex-direction: column;
     gap: 50px;
-    color: blue;
+    color: black;
+    background-color:whitesmoke;
     /* justify-content: space-around; */
 }
 
 .projects{
     grid-area: projects;
-    border:1px solid black;
+    /* border:1px solid black; */
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 50px 1fr 1fr 1fr;
@@ -153,6 +155,7 @@ hr{
         "project5 project6";
     gap:25px;
     justify-items: center;
+    background-color:lightcyan;
 
 }
 
@@ -201,9 +204,6 @@ hr{
 }
 
 
-
-
-
 .img-cont{
     width: 100%;
     height:90%;
@@ -222,7 +222,7 @@ hr{
     grid-area: announcements;
     display: flex;
     flex-direction: column;
-    border:1px solid black;
+    /* border:1px solid black; */
     
     /* justify-content: space-between;  */
 
@@ -236,9 +236,15 @@ hr{
 .facts-cont{
     display: flex;
     flex-direction: column;
-    /* justify-content: stretch; */
+    justify-content: space-evenly;
     flex-wrap: wrap;
-    gap: 25px;
+    /* gap: 50px; */
+    border: 1px black solid;
+    border-radius: 10px;
+    height: 100%;
+    padding: 15px;
+    text-align: center;
+    
 }
 
 .facts{
@@ -247,7 +253,7 @@ hr{
 
 .trending{
     grid-area: trending;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     display: flex;
     flex-direction: column;
 
@@ -255,7 +261,7 @@ hr{
 
 .header, .dashboard-grid, .projects, .announcements, .trending {
     padding: 25px;
-    border:1px solid black;
+    /* border:1px solid black; */
 
 }
 
